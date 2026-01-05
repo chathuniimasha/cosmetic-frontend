@@ -1,12 +1,65 @@
-# React + Vite
+💄 Cosmetics E-Commerce Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive frontend application for a cosmetics e-commerce platform, built using React.
+The application provides user authentication, admin management, and client-side shopping experiences with smooth navigation and a clean UI.
 
-Currently, two official plugins are available:
+📌 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This frontend serves as the client interface for a cosmetics website.
+It supports user login and registration, Google OAuth authentication, admin product management, and customer browsing through a single-page application architecture.
 
-## Expanding the ESLint configuration
+🎨 Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+User login and registration
+
+Google OAuth authentication
+
+Admin dashboard and product management
+
+Client-facing shopping interface
+
+Secure password recovery flow
+
+Toast notifications for user feedback
+
+Smooth routing using React Router
+
+🧭 Routing Structure
+
+/login – User login page
+
+/register – User registration page
+
+/forget – Forgot password page
+
+/admin/* – Admin dashboard and management pages
+
+/* – Client-facing website
+
+⚙️ Technologies Used
+
+React
+
+React Router DOM
+
+Tailwind CSS
+
+Google OAuth
+
+React Hot Toast
+
+Vite
+
+▶️ Run Locally
+npm install
+npm run dev
+
+🔐 Authentication
+
+Supports traditional login & registration
+
+Google OAuth integration for quick sign-in
+
+🎯 Purpose
+
+This project is designed to provide a clean, user-friendly interface for a cosmetics e-commerce system and integrates seamlessly with a RESTful backend API.
