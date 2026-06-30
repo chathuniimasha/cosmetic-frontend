@@ -1,5 +1,5 @@
-const url="https://zrckpxjljkgjkcfnfxtf.supabase.co"; 
-const key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpyY2tweGpsamtnamtjZm5meHRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTYwMzYyMjQsImV4cCI6MjA3MTYxMjIyNH0.uzUnhnO8D-JRZOWVtWZkD4Qx4HJZiVYZuuPuqdiq3l0";
+const url="https://tzzoxmshgytmtpxgentt.supabase.co"; 
+const key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR6em94bXNoZ3l0bXRweGdlbnR0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI4MTMyNzMsImV4cCI6MjA5ODM4OTI3M30.E5Xq7eZ0nwl9LuG2_wJfHzJePYUZJe55eCW6WZ2xLqU";
 
 import { createClient } from "@supabase/supabase-js";
 

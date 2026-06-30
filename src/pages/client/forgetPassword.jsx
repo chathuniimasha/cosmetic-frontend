@@ -36,40 +36,40 @@ export default function ForgetPasswordPage() {
     }
 	return (
 		<div className="w-full h-full flex justify-center items-center text-gray-800">
-			{!emailSent&&<div className="bg-primary w-[500px] h-[500px] shadow-2xl flex flex-col items-center justify-center gap-[20px] rounded-[30px]">
+			{!emailSent&&<div className="bg-primary w-125 h-125 shadow-2xl flex flex-col items-center justify-center gap-5 rounded-[30px]">
 				<h1 className="text-2xl font-bold">Reset Password</h1>
 				<input
 					type="email"
 					placeholder="Enter your email"
-					className="w-[350px] h-[40px] border border-white rounded-xl text-center"
+					className="w-87.5 h-10 border border-white rounded-xl text-center"
 					onChange={(e) => setEmail(e.target.value)}
 				/>
-				<button onClick={sendOTP} className="w-[350px] h-[40px] bg-accent rounded-xl text-white text-lg mt-5 hover:bg-gray-800 transition-all duration-300">
+				<button onClick={sendOTP} className="w-87.5 h-10 bg-accent rounded-xl text-white text-lg mt-5 hover:bg-gray-800 transition-all duration-300">
 					Send OTP
 				</button>
 			</div>}
             {
-                emailSent&& <div className="bg-primary w-[500px] h-[500px] shadow-2xl flex flex-col items-center justify-center gap-[20px] rounded-[30px]">
+                emailSent&& <div className="bg-primary w-125 h-125 shadow-2xl flex flex-col items-center justify-center gap-5 rounded-[30px]">
                     <h1 className="text-2xl font-bold">Verify OTP</h1>
                     <input
                         type="text"
                         placeholder="Enter OTP"
-                        className="w-[350px] h-[40px] border border-white rounded-xl text-center"
+                        className="w-87.5 h-10 border border-white rounded-xl text-center"
                         onChange={(e) => setOtp(e.target.value)}
                     />
                     <input
                         type="password"
                         placeholder="Enter new password"
-                        className="w-[350px] h-[40px] border border-white rounded-xl text-center"
+                        className="w-87.5 h-10 border border-white rounded-xl text-center"
                         onChange={(e) => setNewPassword(e.target.value)}
                     />
                     <input
                         type="password"
                         placeholder="Confirm new password"
-                        className="w-[350px] h-[40px] border border-white rounded-xl text-center"
+                        className="w-87.5 h-10 border border-white rounded-xl text-center"
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     />
-                    <button onClick={resetPassword} className="w-[350px] h-[40px] bg-accent rounded-xl text-white text-lg mt-5 hover:bg-gray-800 transition-all duration-300">
+                    <button onClick={resetPassword} className="w-87.5 h-10 bg-accent rounded-xl text-white text-lg mt-5 hover:bg-gray-800 transition-all duration-300">
                         Reset Password
                     </button>
                 </div>

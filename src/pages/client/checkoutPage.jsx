@@ -90,19 +90,19 @@ export default function CheckoutPage() {
     }
 
     return (
-        <div className="w-[100vw] max-w-[100vw] h-screen flex flex-col px-[10px] py-[40px] items-center">
+        <div className="w-screen max-w-[100vw] h-screen flex flex-col px-2.5 py-10 items-center">
             {cart.map((item, index) => {
                 return (
                     <div
                         key={item.productId}
-                        className="w-full md:w-[800px] h-[200px] md:h-[100px] m-[10px] shadow-2xl flex flex-row items-center relative"
+                        className="w-full md:w-200 h-50 md:h-25 m-2.5 shadow-2xl flex flex-row items-center relative"
                     >
-                        <div className="md:w-[100px] w-[150px] justify-center items-center flex flex-col text-1xl md:text-md">
+                        <div className="md:w-25 w-37.5 justify-center items-center flex flex-col text-1xl md:text-md">
                             <img
                                 src={item.image}
-                                className="w-[100px] h-[100px] object-cover"
+                                className="w-25 h-25 object-cover"
                             />
-                            <div className="h-full flex-col justify-center pl-[10px] md:hidden flex">
+                            <div className="h-full flex-col justify-center pl-2.5 md:hidden flex">
                                 <span className="font-bold text-center md:text-left">{item.name}</span>
                                 <span className="font-semibold text-center md:text-left">
                                     {item.price.toLocaleString("en-US", {
@@ -113,7 +113,7 @@ export default function CheckoutPage() {
                             </div>
                         </div>
 
-                        <div className="w-[320px] h-full flex-col justify-center pl-[10px] hidden md:flex">
+                        <div className="w-[320px] h-full flex-col justify-center pl-2.5 hidden md:flex">
                             <span className="font-bold text-center md:text-left">{item.name}</span>
                             <span className="font-semibold text-center md:text-left">
                                 {item.price.toLocaleString("en-US", {
@@ -123,9 +123,9 @@ export default function CheckoutPage() {
                             </span>
                         </div>
 
-                        <div className="w-[190px] h-full text-2xl md:text-md flex flex-row justify-center items-center">
+                        <div className="w-47.5 h-full text-2xl md:text-md flex flex-row justify-center items-center">
                             <button
-                                className="flex justify-center items-center w-[30px] rounded-[6px] bg-accent text-white cursor-pointer hover:accent"
+                                className="flex justify-center items-center w-7.5 rounded-md bg-accent text-white cursor-pointer hover:accent"
                                 onClick={() => {
                                     const newCart = [...cart]
                                     newCart[index].quantity -= 1
@@ -137,9 +137,9 @@ export default function CheckoutPage() {
                             >
                                 -
                             </button>
-                            <span className="mx-[10px]">{item.quantity}</span>
+                            <span className="mx-2.5">{item.quantity}</span>
                             <button
-                                className="flex justify-center items-center w-[30px] rounded-[6px] bg-accent text-white cursor-pointer hover:accent"
+                                className="flex justify-center items-center w-7.5 rounded-md bg-accent text-white cursor-pointer hover:accent"
                                 onClick={() => {
                                     const newCart = [...cart]
                                     newCart[index].quantity += 1
@@ -150,7 +150,7 @@ export default function CheckoutPage() {
                             </button>
                         </div>
 
-                        <div className="w-[190px] h-full text-2xl md:text-md flex items-center justify-end pr-[10px]">
+                        <div className="w-47.5 h-full text-2xl md:text-md flex items-center justify-end pr-2.5">
                             <span className="font-semibold">
                                 {(item.quantity * item.price).toLocaleString("en-US", {
                                     minimumFractionDigits: 2,
@@ -160,7 +160,7 @@ export default function CheckoutPage() {
                         </div>
 
                         <button
-                            className="w-[30px] h-[30px] absolute top-[0px] right-[0px] md:top[35px] md:right-[-40px] cursor-pointer bg-red-700 shadow rounded-full flex justify-center items-center not-last:text-white border-[2px] border-red-700 hover:bg-white hover:text-red-700"
+                            className="w-7.5 h-7.5 absolute top-0 right-0 md:top[35px] md:-right-10 cursor-pointer bg-red-700 shadow rounded-full flex justify-center items-center not-last:text-white border-2 border-red-700 hover:bg-white hover:text-red-700"
                             onClick={() => {
                                 const newCart = [...cart]
                                 newCart.splice(index, 1)
@@ -173,7 +173,7 @@ export default function CheckoutPage() {
                 )
             })}
 
-            <div className="md:w-[800px] w-full h-[100px] m-[10px] p-[10px] shadow-2xl flex flex-row items-center justify-end relative">
+            <div className="md:w-200 w-full h-25 m-2.5 p-2.5 shadow-2xl flex flex-row items-center justify-end relative">
                 <span className="font-bold text-2xl">
                     Total:{" "}
                     {getTotal().toLocaleString("en-US", {
@@ -183,29 +183,29 @@ export default function CheckoutPage() {
                 </span>
                 <button
                     onClick={placeOrder}
-                    className="absolute left-[10px] md:w-[150px] w-[170px] h-[50px] cursor-pointer rounded-[5px] shadow-2xl bg-accent border-[2px] border-accent text-white hover:bg-white hover:text-accent text-2xl md:text-md"
+                    className="absolute left-2.5 md:w-37.5 w-42.5 h-12.5 cursor-pointer rounded-[5px] shadow-2xl bg-accent border-2 border-accent text-white hover:bg-white hover:text-accent text-2xl md:text-md"
                 >
                     Place Order
                 </button>
             </div>
 
-            <div className="md:w-[800px] w-full flex flex-col md:flex-row m-[10px] p-[10px] shadow-2xl items-center justify-center gap-[10px]">
+            <div className="md:w-200 w-full flex flex-col md:flex-row m-2.5 p-2.5 shadow-2xl items-center justify-center gap-2.5">
                 <input
-                    className="w-[90%] md:w-[250px] h-[45px] border border-gray-300 rounded-[10px] p-[10px]"
+                    className="w-[90%] md:w-62.5 h-11.25 border border-gray-300 rounded-[10px] p-2.5"
                     type="text"
                     placeholder="Enter your name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                 />
                 <input
-                    className="w-[90%] md:w-[250px] h-[45px] border border-gray-300 rounded-[10px] p-[10px]"
+                    className="w-[90%] md:w-62.5 h-11.25 border border-gray-300 rounded-[10px] p-2.5"
                     type="text"
                     placeholder="Enter your address"
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
                 />
                 <input
-                    className="w-[90%] md:w-[250px] h-[45px] border border-gray-300 rounded-[10px] p-[10px]"
+                    className="w-[90%] md:w-62.5 h-11.25 border border-gray-300 rounded-[10px] p-2.5"
                     type="text"
                     placeholder="Enter your phone number"
                     value={phone}
